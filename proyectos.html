@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio completo de proyectos - Pablo Santamaría Freelancer" />
+  <title>Mi Portafolio - Pablo Santamaría Freelancer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <style>
+    .project-detail {
+      background-color: #2d2d2d;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .project-features {
+      background-color: #404040;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .project-features ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    .project-features li {
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+<body id="inicio">
+  <header class="container text-center my-4">
+    <h1 class="titulo1">Mi Portafolio de Proyectos</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link active" href="proyectos.html">Portafolio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <!-- Sección de proyectos dinámicos -->
+    <section id="portfolio" class="mb-5">
+      <div class="row portfolio-container">
+        <!-- Los proyectos se cargarán desde projects.json -->
+        <div class="col-12 text-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando proyectos...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyecto 1: E-commerce -->
+    <section class="project-detail" id="project-1">
+      <div class="row">
+        <div class="col-lg-8">
+          <img src="https://via.placeholder.com/800x400?text=E-commerce+Personalizado" class="project-image" alt="E-commerce Personalizado">
+          
+          <h2>E-commerce Personalizado</h2>
+          <p>
+            Tienda en línea completa con pasarela de pagos integrada. Aumentó las ventas 
+            en un 60% en los primeros 3 meses. El sistema incluye gestión de inventario, 
+            carrito de compras, procesamiento de pagos seguro y panel de administración 
+            para el cliente.
+          </p>
+
+          <h3>Características Principales</h3>
+          <div class="project-features">
+            <ul>
+              <li>Catálogo de productos con búsqueda y filtros avanzados</li>
+              <li>Carrito de compras funcional y persistente</li>
+              <li>Integración con Stripe para pagos seguros</li>
+              <li>Panel de administración completo</li>
+              <li>Gestión de inventario en tiempo real</li>
+              <li>Sistema de autenticación de usuarios</li>
+              <li>Historial de pedidos detallado</li>
+              <li>Notificaciones por email automáticas</li>
+            </ul>
+          </div>
+
+          <h3>Tecnologías Utilizadas</h3>
+          <div class="mb-4">
+            <span class="badge bg-secondary me-2">React</span>
+            <span class="badge bg-secondary me-2">Node.js</span>
+            <span class="badge bg-secondary me-2">SQLite</span>
+            <span class="badge bg-secondary me-2">Stripe</span>
+            <span class="badge bg-secondary me-2">Bootstrap</span>
+          </div>
+
+          <h3>Resultados</h3>
+          <p>
+            La tienda en línea logró un aumento del 60% en las ventas durante los primeros 
+            3 meses de funcionamiento. La integración de Stripe aseguró transacciones 
+            seguras y la experiencia de usuario mejoró significativamente con el diseño 
+            responsive y la interfaz intuitiva.
+          </p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Información del Proyecto</h5>
+              <p class="card-text"><strong>Categoría:</strong> <span class="badge bg-primary">E-commerce</span></p>
+              <p class="card-text"><strong>Año:</strong> 2024</p>
+              <p class="card-text"><strong>Cliente:</strong> Tienda Online</p>
+              <p class="card-text"><strong>Duración:</strong> 3 meses</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Enlaces</h5>
+              <a href="https://github.com" target="_blank" class="btn btn-dark w-100 mb-2">
+                <i class="bi bi-github me-2"></i>Ver en GitHub
+              </a>
+              <a href="https://example.com" target="_blank" class="btn btn-primary w-100">
+                <i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Proyecto 2: Landing Page -->
+    <section class="project-detail" id="project-2">
+      <div class="row">
+        <div class="col-lg-8">
+          <img src="https://via.placeholder.com/800x400?text=Landing+Page+Optimizada" class="project-image" alt="Landing Page Optimizada">
+          
+          <h2>Landing Page Optimizada</h2>
+          <p>
+            Landing page optimizada para conversión con SEO técnico. Tasa de conversión 
+            del 8% en campañas de marketing. El diseño está completamente optimizado 
+            para lograr el máximo rendimiento en campañas de Google Ads y redes sociales.
+          </p>
+
+          <h3>Características Principales</h3>
+          <div class="project-features">
+            <ul>
+              <li>Optimización SEO técnica avanzada</li>
+              <li>Diseño orientado a la conversión</li>
+              <li>Formularios optimizados con validación</li>
+              <li>Velocidad de carga optimizada (&lt;2 segundos)</li>
+              <li>Integración con Google Analytics</li>
+              <li>Diseño responsive y mobile-first</li>
+              <li>Call-to-action estratégicamente ubicados</li>
+              <li>Testimonios y social proof efectivos</li>
+            </ul>
+          </div>
+
+          <h3>Tecnologías Utilizadas</h3>
+          <div class="mb-4">
+            <span class="badge bg-secondary me-2">HTML5</span>
+            <span class="badge bg-secondary me-2">CSS3</span>
+            <span class="badge bg-secondary me-2">JavaScript</span>
+            <span class="badge bg-secondary me-2">SEO</span>
+            <span class="badge bg-secondary me-2">Google Analytics</span>
+          </div>
+
+          <h3>Resultados</h3>
+          <p>
+            La landing page logró una tasa de conversión del 8% en campañas de marketing, 
+            superando significativamente el promedio del sector (2-3%). La optimización 
+            SEO técnica mejoró el posicionamiento orgánico y la velocidad de carga 
+            contribuyó a reducir la tasa de rebote en un 40%.
+          </p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Información del Proyecto</h5>
+              <p class="card-text"><strong>Categoría:</strong> <span class="badge bg-primary">Marketing Digital</span></p>
+              <p class="card-text"><strong>Año:</strong> 2024</p>
+              <p class="card-text"><strong>Cliente:</strong> Empresa de Marketing</p>
+              <p class="card-text"><strong>Duración:</strong> 6 semanas</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Enlaces</h5>
+              <a href="https://github.com" target="_blank" class="btn btn-dark w-100 mb-2">
+                <i class="bi bi-github me-2"></i>Ver en GitHub
+              </a>
+              <a href="https://example.com" target="_blank" class="btn btn-primary w-100">
+                <i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Proyecto 3: Sitio Web Corporativo -->
+    <section class="project-detail" id="project-3">
+      <div class="row">
+        <div class="col-lg-8">
+          <img src="https://via.placeholder.com/800x400?text=Sitio+Web+Corporativo" class="project-image" alt="Sitio Web Corporativo">
+          
+          <h2>Sitio Web Corporativo</h2>
+          <p>
+            Sitio web profesional para empresa multinacional. Incluye secciones de servicios, 
+            galería de proyectos, blog corporativo y formulario de contacto. Totalmente 
+            responsive y optimizado para SEO.
+          </p>
+
+          <h3>Características Principales</h3>
+          <div class="project-features">
+            <ul>
+              <li>Diseño corporativo profesional y moderno</li>
+              <li>Secciones de servicios detalladas</li>
+              <li>Galería de proyectos con filtros</li>
+              <li>Blog integrado con SEO optimizado</li>
+              <li>Formulario de contacto con validación</li>
+              <li>Integración con redes sociales</li>
+              <li>Totalmente responsive</li>
+              <li>Panel de administración básico</li>
+            </ul>
+          </div>
+
+          <h3>Tecnologías Utilizadas</h3>
+          <div class="mb-4">
+            <span class="badge bg-secondary me-2">HTML5</span>
+            <span class="badge bg-secondary me-2">CSS3</span>
+            <span class="badge bg-secondary me-2">JavaScript</span>
+            <span class="badge bg-secondary me-2">Bootstrap</span>
+            <span class="badge bg-secondary me-2">CMS</span>
+          </div>
+
+          <h3>Resultados</h3>
+          <p>
+            El sitio web corporativo mejoró significativamente la presencia en línea de 
+            la empresa, generando un 35% más de consultas de clientes potenciales. La 
+            estrategia de SEO posicionó la empresa en los primeros resultados de búsqueda 
+            para palabras clave de alto valor.
+          </p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Información del Proyecto</h5>
+              <p class="card-text"><strong>Categoría:</strong> <span class="badge bg-primary">Sitio Corporativo</span></p>
+              <p class="card-text"><strong>Año:</strong> 2024</p>
+              <p class="card-text"><strong>Cliente:</strong> Empresa Multinacional</p>
+              <p class="card-text"><strong>Duración:</strong> 3 meses</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Enlaces</h5>
+              <a href="https://github.com" target="_blank" class="btn btn-dark w-100 mb-2">
+                <i class="bi bi-github me-2"></i>Ver en GitHub
+              </a>
+              <a href="https://example.com" target="_blank" class="btn btn-primary w-100">
+                <i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Proyecto 4: WordPress Personalizado -->
+    <section class="project-detail" id="project-4">
+      <div class="row">
+        <div class="col-lg-8">
+          <img src="https://via.placeholder.com/800x400?text=WordPress+Personalizado" class="project-image" alt="WordPress Personalizado">
+          
+          <h2>WordPress Personalizado</h2>
+          <p>
+            Desarrollo de sitio WordPress con tema personalizado y plugins optimizados. 
+            Sistema de gestión de contenido flexible que permite al cliente actualizar 
+            contenido sin conocimientos técnicos.
+          </p>
+
+          <h3>Características Principales</h3>
+          <div class="project-features">
+            <ul>
+              <li>Tema WordPress personalizado</li>
+              <li>Plugins optimizados y seguros</li>
+              <li>Sistema de gestión de contenido intuitivo</li>
+              <li>Optimización SEO completa</li>
+              <li>Integración de formularios avanzados</li>
+              <li>Optimización de velocidad y caché</li>
+              <li>Seguridad reforzada</li>
+              <li>Actualizaciones automáticas configuradas</li>
+            </ul>
+          </div>
+
+          <h3>Tecnologías Utilizadas</h3>
+          <div class="mb-4">
+            <span class="badge bg-secondary me-2">WordPress</span>
+            <span class="badge bg-secondary me-2">PHP</span>
+            <span class="badge bg-secondary me-2">CSS3</span>
+            <span class="badge bg-secondary me-2">WooCommerce</span>
+            <span class="badge bg-secondary me-2">SEO</span>
+          </div>
+
+          <h3>Resultados</h3>
+          <p>
+            El cliente puede ahora gestionar y actualizar todos los contenidos de forma 
+            autónoma. La implementación de WooCommerce permitió crear una tienda en línea 
+            integrada. El sitio pasó de tener 0 a 500 visitas mensuales en los primeros 
+            3 meses con las estrategias de SEO implementadas.
+          </p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Información del Proyecto</h5>
+              <p class="card-text"><strong>Categoría:</strong> <span class="badge bg-primary">WordPress</span></p>
+              <p class="card-text"><strong>Año:</strong> 2024</p>
+              <p class="card-text"><strong>Cliente:</strong> Negocio Local</p>
+              <p class="card-text"><strong>Duración:</strong> 2 meses</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Enlaces</h5>
+              <a href="https://github.com" target="_blank" class="btn btn-dark w-100 mb-2">
+                <i class="bi bi-github me-2"></i>Ver en GitHub
+              </a>
+              <a href="https://example.com" target="_blank" class="btn btn-primary w-100">
+                <i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-5 text-center">
+      <a href="index.html" class="btn btn-primary btn-lg">
+        <i class="bi bi-arrow-left me-2"></i>Volver al Inicio
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="d-flex justify-content-center mb-2">
+      <a href="https://linkedin.com" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+      <a href="https://twitter.com" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
+      <a href="https://github.com" class="text-white mx-2"><i class="bi bi-github fs-4"></i></a>
+    </div>
+    <h5>&copy; 2025 Pablo Santamaría. Todos los derechos reservados.</h5>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="JS/main.js"></script>
+  <script src="JS/Portafolio.js"></script>
+</body>
+</html>

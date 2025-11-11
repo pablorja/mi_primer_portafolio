@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce",
+    "description": "Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos y gestión de inventario.",
+    "image": "IMG/ecommerce-preview.jpg",
+    "category": "E-commerce",
+    "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    "link": "PROYECTS/E-comerce.html",
+    "github": "https://github.com",
+    "demo": "#"
+  },
+  {
+    "id": 2,
+    "title": "Landing Page",
+    "description": "Página de aterrizaje moderna y atractiva diseñada para maximizar conversiones y captar leads.",
+    "image": "IMG/landing-preview.jpg",
+    "category": "Landing Page",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "link": "PROYECTS/Landing_page.html",
+    "github": "https://github.com",
+    "demo": "#"
+  },
+  {
+    "id": 3,
+    "title": "Sitio Web Corporativo",
+    "description": "Sitio web profesional para empresas con secciones de servicios, portafolio y contacto.",
+    "image": "IMG/corporativo-preview.jpg",
+    "category": "Sitio Corporativo",
+    "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    "link": "PROYECTS/Sitio_Web_corporativo.html",
+    "github": "https://github.com",
+    "demo": "#"
+  },
+  {
+    "id": 4,
+    "title": "WordPress Personalizado",
+    "description": "Desarrollo de sitio WordPress con tema personalizado, plugins optimizados y SEO.",
+    "image": "IMG/wordpress-preview.jpg",
+    "category": "WordPress",
+    "technologies": ["WordPress", "PHP", "CSS"],
+    "link": "PROYECTS/Worprees.html",
+    "github": "https://github.com",
+    "demo": "#"
+  }
+]

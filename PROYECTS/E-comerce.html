@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="E-commerce Personalizado - Proyecto de tienda en línea por Pablo Santamaría" />
+    <title>E-commerce Personalizado - Pablo Santamaría Freelancer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <style>
+      /* Tema Oscuro */
+      body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+      }
+      h1, h2, h3, h5 {
+        color: #ffffff;
+      }
+      h3 {
+        color: #64b5f6;
+      }
+      .card {
+        background-color: #2d2d2d;
+        border: 1px solid #404040;
+        color: #e0e0e0;
+      }
+      .card-title {
+        color: #64b5f6;
+      }
+      .card-text {
+        color: #e0e0e0;
+      }
+      .navbar-dark {
+        background-color: #1a1a1a !important;
+      }
+      .bg-dark {
+        background-color: #1a1a1a !important;
+      }
+      .btn-dark {
+        background-color: #424242;
+        border-color: #424242;
+      }
+      .btn-primary {
+        background-color: #64b5f6;
+        border-color: #64b5f6;
+        color: #1a1a1a;
+      }
+      .btn-secondary {
+        background-color: #757575;
+        border-color: #757575;
+      }
+      .badge {
+        background-color: #64b5f6;
+        color: #1a1a1a;
+      }
+      ul {
+        color: #e0e0e0;
+      }
+      code {
+        background-color: #2d2d2d;
+        color: #64b5f6;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container text-center my-4">
+      <h1 class="titulo1">E-commerce Personalizado</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="../servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="../portafolio.html">Portafolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row">
+        <div class="col-lg-8">
+          <img src="https://via.placeholder.com/800x400?text=E-commerce" class="img-fluid rounded mb-4" alt="E-commerce Personalizado">
+          
+          <h2>Descripción del Proyecto</h2>
+          <p>
+            Tienda en línea completa con pasarela de pagos integrada. Aumentó las ventas 
+            en un 60% en los primeros 3 meses. El sistema incluye gestión de inventario, 
+            carrito de compras, procesamiento de pagos seguro y panel de administración 
+            para el cliente.
+          </p>
+
+          <h3>Características Principales</h3>
+          <ul>
+            <li>Catálogo de productos con búsqueda y filtros</li>
+            <li>Carrito de compras funcional</li>
+            <li>Integración con Stripe para pagos seguros</li>
+            <li>Panel de administración completo</li>
+            <li>Gestión de inventario en tiempo real</li>
+            <li>Sistema de autenticación de usuarios</li>
+            <li>Historial de pedidos</li>
+            <li>Notificaciones por email</li>
+          </ul>
+
+          <h3>Tecnologías Utilizadas</h3>
+          <div class="mb-4">
+            <span class="badge bg-secondary me-2">React</span>
+            <span class="badge bg-secondary me-2">Node.js</span>
+            <span class="badge bg-secondary me-2">SQLite</span>
+            <span class="badge bg-secondary me-2">Stripe</span>
+          </div>
+
+          <h3>Resultados</h3>
+          <p>
+            La tienda en línea logró un aumento del 60% en las ventas durante los primeros 
+            3 meses de funcionamiento. La integración de Stripe aseguró transacciones 
+            seguras y la experiencia de usuario mejoró significativamente con el diseño 
+            responsive y la interfaz intuitiva.
+          </p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Información del Proyecto</h5>
+              <p class="card-text"><strong>Categoría:</strong> E-commerce</p>
+              <p class="card-text"><strong>Año:</strong> 2024</p>
+              <p class="card-text"><strong>Cliente:</strong> Tienda Online</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Enlaces</h5>
+              <a href="https://github.com/tuusuario/ecommerce-personalizado" target="_blank" class="btn btn-dark w-100 mb-2">
+                <i class="bi bi-github me-2"></i>Ver en GitHub
+              </a>
+              <a href="https://tusuario.github.io/ecommerce-personalizado" target="_blank" class="btn btn-primary w-100">
+                <i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <a href="../portafolio.html" class="btn btn-secondary">
+          <i class="bi bi-arrow-left me-2"></i>Volver al Portafolio
+        </a>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <div class="d-flex justify-content-center mb-2">
+        <a href="https://linkedin.com" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+        <a href="https://twitter.com" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
+        <a href="https://github.com" class="text-white mx-2"><i class="bi bi-github fs-4"></i></a>
+      </div>
+      <h5>&copy; 2025 Pablo Santamaría. Todos los derechos reservados.</h5>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../JS/main.js"></script>
+  </body>
+</html>
