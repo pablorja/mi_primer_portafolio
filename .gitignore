@@ -1,18 +1,8 @@
-# node_modules
-.DS_Store
-.vscode/
+node_modules/
+contactos.db
 *.log
 .env
-.env.local
-dist/
-build/
-.cache/
 
-# IDE
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-Thumbs.db
+# Netlify
+.netlify/
+netlify-functions/

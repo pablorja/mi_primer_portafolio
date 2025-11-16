@@ -1,0 +1,31 @@
+# Configuración de Netlify
+
+[build]
+  # Directorio de publicación
+  publish = "."
+  
+  # Comando de build (opcional)
+  command = "echo 'No build needed'"
+
+# Configuración de funciones
+[functions]
+  directory = "netlify/functions"
+
+# Redirecciones para las funciones
+[[redirects]]
+  from = "/api/contacto"
+  to = "/.netlify/functions/guardar-contacto"
+  status = 200
+
+[[redirects]]
+  from = "/api/contactos"
+  to = "/.netlify/functions/obtener-contactos"
+  status = 200
+
+# Headers para CORS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"

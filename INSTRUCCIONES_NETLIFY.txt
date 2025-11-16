@@ -1,0 +1,172 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║     🚀 CÓMO DESPLEGAR TU SITIO EN NETLIFY - PASO A PASO       ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+📋 OPCIÓN 1: DESPLIEGUE RÁPIDO (Drag & Drop)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Ve a: https://app.netlify.com/drop
+
+2. Arrastra TODA la carpeta de tu proyecto a la página
+
+3. ¡Listo! En 30 segundos tu sitio estará en línea
+
+4. Netlify te dará una URL como: https://random-name-123.netlify.app
+
+5. Puedes cambiar el nombre en: Site settings → Domain management
+
+
+📋 OPCIÓN 2: DESDE GITHUB (Recomendado para actualizaciones)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 1: Subir a GitHub
+------------------------
+Abre la terminal en tu proyecto y ejecuta:
+
+git init
+git add .
+git commit -m "Sistema de contactos"
+git branch -M main
+
+Luego crea un repositorio en GitHub y ejecuta:
+
+git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+git push -u origin main
+
+
+PASO 2: Conectar con Netlify
+-----------------------------
+1. Ve a: https://app.netlify.com/
+
+2. Click en "Add new site" → "Import an existing project"
+
+3. Selecciona "GitHub" y autoriza el acceso
+
+4. Selecciona tu repositorio
+
+5. Netlify detectará automáticamente la configuración
+
+6. Click en "Deploy site"
+
+7. ¡Listo! Tu sitio estará en línea en 1-2 minutos
+
+
+PASO 3: Actualizaciones Automáticas
+------------------------------------
+Cada vez que hagas cambios:
+
+git add .
+git commit -m "Descripción del cambio"
+git push
+
+Netlify desplegará automáticamente los cambios ✨
+
+
+✅ VERIFICAR QUE FUNCIONA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre tu sitio: https://tu-sitio.netlify.app
+
+2. Llena el formulario de contacto
+
+3. Deberías ver: "¡Gracias por contactarnos! Tu mensaje ha sido enviado"
+
+4. Abre: https://tu-sitio.netlify.app/admin.html
+
+5. Deberías ver el contacto que acabas de enviar
+
+
+⚠️ IMPORTANTE: PERSISTENCIA DE DATOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Los datos se guardan temporalmente en Netlify (/tmp):
+
+✅ Perfecto para: Demos, pruebas, portafolios
+❌ Los datos se pierden: Después de ~15 min de inactividad o al redesplegar
+
+Para datos permanentes, necesitas una base de datos externa:
+- Supabase (PostgreSQL) - Gratis
+- MongoDB Atlas - Gratis
+- Airtable - Gratis
+
+
+🔧 PROBAR LOCALMENTE CON NETLIFY DEV
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Instala Netlify CLI:
+npm install -g netlify-cli
+
+Ejecuta:
+netlify dev
+
+Abre: http://localhost:8888
+
+Esto simula el entorno de Netlify en tu computadora
+
+
+📁 ARCHIVOS IMPORTANTES CREADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ netlify.toml
+   → Configuración de Netlify
+
+✅ netlify/functions/guardar-contacto.js
+   → Función serverless para guardar contactos
+
+✅ netlify/functions/obtener-contactos.js
+   → Función serverless para obtener contactos
+
+✅ JS/contacto.js (actualizado)
+   → URLs cambiadas a relativas (/api/contacto)
+
+✅ admin.html (actualizado)
+   → URLs cambiadas a relativas (/api/contactos)
+
+
+🐛 SOLUCIÓN DE PROBLEMAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problema: "Function not found"
+Solución: Verifica que existen las carpetas:
+          - netlify/functions/
+          - netlify.toml en la raíz
+
+Problema: "Error de conexión"
+Solución: Verifica que las URLs en JS no tengan "localhost"
+          Deben ser: /api/contacto (sin http://)
+
+Problema: Los datos desaparecen
+Solución: Es normal con /tmp storage
+          Usa base de datos externa para persistencia
+
+
+📊 VER LOGS DE LAS FUNCIONES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Ve a tu sitio en Netlify Dashboard
+2. Click en "Functions" en el menú lateral
+3. Selecciona una función
+4. Ve los logs en tiempo real
+
+
+🎉 ¡ESO ES TODO!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Tu sistema de contactos está listo para Netlify.
+
+Próximos pasos:
+1. Desplegar usando Opción 1 o 2
+2. Probar el formulario
+3. Compartir tu sitio con el mundo 🌍
+
+¿Necesitas ayuda? Revisa:
+- README_DESPLIEGUE.md (guía detallada)
+- DEPLOY_NETLIFY.md (documentación completa)
+
+
+════════════════════════════════════════════════════════════════
+
+Creado con ❤️ para tu portafolio
