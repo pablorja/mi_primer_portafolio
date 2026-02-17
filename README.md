@@ -4,160 +4,83 @@ Portafolio web profesional responsivo de **Pablo Santamaría**, desarrollador we
 
 ## 🚀 Características
 
-- ✨ Diseño moderno con tema oscuro
-- 📱 100% responsivo (Mobile-First)
-- 🎨 Interfaz atractiva con animaciones suaves
-- 💼 Portafolio con 4 proyectos destacados
-- 🔍 SEO optimizado
-- ⚡ Rápido y eficiente
-- 📧 Formulario de contacto funcional
+- ✨ **Diseño Moderno**: Interfaz con tema oscuro y animaciones suaves.
+- 📱 **Totalmente Responsivo**: Optimizado para móviles, tablets y escritorio (Mobile-First).
+- 💼 **Gestión de Proyectos**: Carga dinámica de proyectos desde API/JSON.
+- 📧 **Formulario de Contacto**: Integrado con backend y base de datos SQLite.
+- 🛠️ **Panel de Administración**: Visualización de contactos recibidos.
+- 🔍 **SEO Optimizado**: Estructura semántica para mejor posicionamiento.
 
 ## 📂 Estructura del Proyecto
 
 ```
 freelancer-portafolio/
-├── index.html                 # Página principal
-├── proyectos.html             # Portafolio completo
-├── CSS/
-│   ├── styles.css            # Estilos principales
-│   └── normalize.css          # Normalización CSS
-├── JS/
-│   ├── main.js               # Scripts principales
-│   └── Portafolio.js         # Carga dinámica de proyectos
-├── data/
-│   └── projects.json         # Datos de proyectos
-├── IMG/                      # Imágenes y assets
-├── PROYECTS/                 # Páginas de proyectos individuales
-│   ├── E-comerce.html
-│   ├── Landing_page.html
-│   ├── Sitio_Web_corporativo.html
-│   └── Worprees.html
-└── README.md                 # Este archivo
+├── index.html          # Página principal
+├── proyectos.html      # Portafolio completo detallado
+├── admin.html          # Panel de administración de contactos
+├── server.js           # Servidor backend (Node.js + Express)
+├── CSS/                # Estilos (SASS/CSS)
+├── JS/                 # Lógica del frontend (Vanilla JS)
+├── data/               # Datos (proyectos en JSON)
+├── docs/               # Documentación detallada
+├── IMG/                # Imágenes y recursos visuales
+└── PROYECTS/           # Páginas estáticas de proyectos individuales
 ```
 
-## � Secciones Principales
-
-### 1. **Página Principal (index.html)**
-- Hero section con llamada a la acción
-- Sección "Sobre mí" con descripción profesional
-- Servicios ofrecidos (Landing Page, Diseño Web, E-commerce)
-- Preview de 3 proyectos destacados
-- Formulario de contacto
-- Footer con redes sociales
-
-### 2. **Portafolio Completo (proyectos.html)**
-- 4 proyectos detallados:
-  - **E-commerce**: Tienda online con pasarela de pagos
-  - **Landing Page**: Página optimizada para conversión
-  - **Sitio Corporativo**: Sitio web profesional para empresas
-  - **WordPress Personalizado**: Desarrollo con WordPress y WooCommerce
-
-## �️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 
 ### Frontend
-- **HTML5** - Estructura semántica
-- **CSS3** - Estilos responsivos
-- **JavaScript** - Interactividad
-- **Bootstrap 5.3.3** - Framework CSS
-- **Bootstrap Icons** - Iconografía
+- **HTML5 & CSS3** - Estructura y estilos modernos.
+- **JavaScript (ES6+)** - Interactividad y consumo de APIs.
+- **Bootstrap 5.3** - Framework CSS para diseño responsivo.
+- **Bootstrap Icons** - Iconografía vectorial.
 
-### Herramientas
-- **Google Fonts** - Tipografía
-- **Git & GitHub** - Control de versiones
-- **Responsive Design** - Mobile-first
+### Backend
+- **Node.js & Express** - Servidor web y API REST.
+- **SQLite3** - Base de datos ligera para almacenamiento de contactos.
+- **CORS & Body-parser** - Middlewares para manejo de peticiones.
 
-## � Responsividad
+## 🚀 Instalación y Configuración
 
-El sitio está optimizado para todos los dispositivos:
+### Requisitos Previos
+- [Node.js](https://nodejs.org/) instalado.
 
-| Dispositivo | Resolución | Columnas |
-|---|---|---|
-| 📱 Mobile | < 576px | 1 |
-| 📱 Tablet | 576-768px | 2 |
-| 💻 Tablet Grande | 768-992px | 2-3 |
-| �️ Desktop | 992px+ | 3-4 |
+### Pasos para Ejecutar Localmente
 
-## � Instalación y Uso
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/pablorja/mi_primer_portafolio.git
+   cd mi_primer_portafolio
+   ```
 
-### Opción 1: Clonar y Abrir
-```bash
-# Clonar el repositorio
-git clone https://github.com/pablorja/mi_primer_portafolio.git
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-# Navegar a la carpeta
-cd mi_primer_portafolio
+3. **Iniciar el servidor:**
+   ```bash
+   npm start
+   ```
 
-# Abrir en navegador
-# Click derecho en index.html → Abrir con navegador
-```
+4. **Ver el sitio:**
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-### Opción 2: Servidor Local
-```bash
-# Con Python 3
-python -m http.server 8000
+## 📈 API Endpoints
 
-# Con Node.js
-npx http-server
+El backend ofrece los siguientes endpoints:
 
-# Luego visita: http://localhost:8000
-```
-
-## 📋 Proyectos Incluidos
-
-### 1. E-commerce
-- Tecnologías: React, Node.js, SQLite, Stripe
-- Aumento de ventas: 60% en 3 meses
-- [Ver proyecto →](proyectos.html#project-1)
-
-### 2. Landing Page
-- Tecnologías: HTML5, CSS3, JavaScript, SEO
-- Tasa de conversión: 8%
-- [Ver proyecto →](proyectos.html#project-2)
-
-### 3. Sitio Corporativo
-- Tecnologías: HTML5, CSS3, JavaScript, Bootstrap
-- Aumento de consultas: 35%
-- [Ver proyecto →](proyectos.html#project-3)
-
-### 4. WordPress Personalizado
-- Tecnologías: WordPress, PHP, CSS, WooCommerce
-- Visitas mensuales: 500+
-- [Ver proyecto →](proyectos.html#project-4)
-
-## 🎨 Personalización
-
-### Cambiar Colores
-Edita las variables CSS en `CSS/styles.css`:
-
-```css
-:root {
-  --accent-blue: #64b5f6;      /* Color principal */
-  --bg-primary: #1a1a1a;       /* Fondo principal */
-  --text-primary: #e0e0e0;     /* Texto principal */
-}
-```
-
-### Agregar Proyectos
-1. Edita `data/projects.json`
-2. Agrega nueva entrada de proyecto
-3. Crea nueva sección en `proyectos.html`
-
-## 📞 Contacto
-
-- **Email**: contacto@example.com
-- **LinkedIn**: [Tu perfil]
-- **GitHub**: [Tu perfil]
-- **Twitter**: [Tu perfil]
+- `GET /api/projects`: Obtiene la lista de proyectos.
+- `POST /api/contacto`: Guarda un nuevo mensaje de contacto.
+- `GET /api/contactos`: Obtiene todos los mensajes (usado en el panel admin).
 
 ## 📝 Documentación Adicional
 
-- [GUIA_PORTAFOLIO.md](GUIA_PORTAFOLIO.md) - Guía técnica completa
-- [MEJORAS_RESPONSIVAS.md](MEJORAS_RESPONSIVAS.md) - Detalles de CSS
-- [RESUMEN_VISUAL.txt](RESUMEN_VISUAL.txt) - Resumen visual del proyecto
+Puedes encontrar guías detalladas sobre despliegue y configuración en la carpeta `docs/`:
+- [Documentación Técnica](docs/DOCUMENTACION_TECNICA.md)
+- [Guía de Despliegue en Netlify](docs/DEPLOY_NETLIFY.md)
+- [Configuración de Base de Datos](docs/README_BASE_DATOS.md)
 
 ---
-
-**Última actualización**: 10 de Noviembre de 2025
-
 **Desarrollador**: Pablo Santamaría  
-**Estado**: ✅ Completado y Responsivo
+**Última actualización**: Noviembre 2025

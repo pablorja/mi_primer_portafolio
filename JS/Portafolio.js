@@ -17,16 +17,15 @@ async function loadProjects(containerSelector = '.portfolio-container', limit = 
     `;
 
     // Intentar cargar desde API primero, luego desde JSON
-    const apiBase = window.PROJECTS_API_BASE || 'http://localhost:3001';
+    const apiBase = window.PROJECTS_API_BASE || '';
     let projects = [];
 
     try {
-      const response = await fetch(`${apiBase}/api/projects`, { 
-        timeout: 5000 
-      });
+      const response = await fetch(`${apiBase}/api/projects`);
       if (response.ok) {
         const data = await response.json();
-        projects = data.ok ? data.data : [];
+        // El servidor responderá con { success: true, proyectos: [...] }
+        projects = data.success ? data.proyectos : [];
         console.log('Proyectos cargados desde API:', projects.length);
       }
     } catch (e) {
