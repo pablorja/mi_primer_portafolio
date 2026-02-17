@@ -23,6 +23,7 @@ const sqlite3 = require('sqlite3').verbose(); // Base de datos SQLite
 const cors = require('cors');              // Manejo de CORS
 const bodyParser = require('body-parser'); // Parser de datos
 const path = require('path');              // Manejo de rutas
+const fs = require('fs');                  // Manejo de archivos
 
 // ============================================
 // CONFIGURACIÓN INICIAL
@@ -183,6 +184,48 @@ app.post('/api/contacto', (req, res) => {
 });
 
 /**
+ * GET /api/projects
+ * ==================
+ * Obtiene todos los proyectos del archivo JSON
+ *
+ * MÉTODO: GET
+ * URL: http://localhost:3000/api/projects
+ *
+ * RESPUESTA EXITOSA (200):
+ * {
+ *   "success": true,
+ *   "proyectos": [ ... ]
+ * }
+ */
+app.get('/api/projects', (req, res) => {
+  const projectsPath = path.join(__dirname, 'data', 'projects.json');
+
+  fs.readFile(projectsPath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('❌ Error al leer proyectos:', err);
+      return res.status(500).json({
+        success: false,
+        message: 'Error al obtener proyectos'
+      });
+    }
+
+    try {
+      const projects = JSON.parse(data);
+      res.json({
+        success: true,
+        proyectos: projects
+      });
+    } catch (parseErr) {
+      console.error('❌ Error al parsear proyectos:', parseErr);
+      res.status(500).json({
+        success: false,
+        message: 'Error al procesar datos de proyectos'
+      });
+    }
+  });
+});
+
+/**
  * GET /api/contactos
  * ==================
  * Obtiene todos los contactos de la base de datos
@@ -291,6 +334,19 @@ app.get('/api/contacto/:id', (req, res) => {
 });
 
 // ============================================
+// MANEJO DE ERRORES
+// ============================================
+/**
+ * Manejo de rutas no encontradas para la API
+ */
+app.use('/api', (req, res) => {
+  res.status(404).json({
+    success: false,
+    message: 'Endpoint de API no encontrado'
+  });
+});
+
+// ============================================
 // INICIAR SERVIDOR
 // ============================================
 /**
@@ -316,6 +372,7 @@ app.listen(PORT, () => {
   console.log(`   POST   http://localhost:${PORT}/api/contacto`);
   console.log(`   GET    http://localhost:${PORT}/api/contactos`);
   console.log(`   GET    http://localhost:${PORT}/api/contacto/:id`);
+  console.log(`   GET    http://localhost:${PORT}/api/projects`);
   console.log('');
   console.log('📄 Páginas disponibles:');
   console.log(`   http://localhost:${PORT}/index.html`);

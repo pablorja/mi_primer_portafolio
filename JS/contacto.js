@@ -88,20 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
        * try-catch: Maneja errores que puedan ocurrir
        * durante la petición HTTP
        */
+      // OBTENER REFERENCIA AL BOTÓN Y CONTENEDOR DE ALERTAS
+      const submitBtn = formulario.querySelector('input[type="submit"]');
+      const alertContainer = document.getElementById('contacto-alert');
+      const originalBtnText = submitBtn.value;
+
       try {
+        // MOSTRAR ESTADO DE CARGA
+        submitBtn.disabled = true;
+        submitBtn.value = 'Enviando...';
+        alertContainer.innerHTML = '';
         
         /**
          * FETCH API: Realiza una petición HTTP al servidor
-         * 
-         * URL: /api/contacto (relativa, funciona en localhost y producción)
-         * MÉTODO: POST (para crear un nuevo recurso)
-         * 
-         * HEADERS:
-         * - Content-Type: Indica que enviamos datos en formato JSON
-         * 
-         * BODY:
-         * - JSON.stringify(): Convierte el objeto JavaScript a JSON
-         * - El servidor recibirá estos datos en req.body
          */
         const response = await fetch('/api/contacto', {
           method: 'POST',
@@ -111,49 +110,49 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify(formData)
         });
         
-        /**
-         * PROCESAR RESPUESTA DEL SERVIDOR
-         * 
-         * response.json(): Convierte la respuesta JSON a objeto JavaScript
-         * await: Espera a que la conversión termine
-         */
         const data = await response.json();
         
         // ============================================
         // MANEJAR RESPUESTA
         // ============================================
-        /**
-         * Verificar si la operación fue exitosa
-         * El servidor responde con { success: true/false }
-         */
         if (data.success) {
-          // ✅ ÉXITO: Mostrar mensaje de confirmación
-          alert('¡Gracias por contactarnos! Tu mensaje ha sido enviado exitosamente.');
+          // ✅ ÉXITO: Mostrar mensaje de confirmación usando Bootstrap
+          alertContainer.innerHTML = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i>
+              ¡Gracias por contactarnos! Tu mensaje ha sido enviado exitosamente.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          `;
           
-          /**
-           * LIMPIAR FORMULARIO
-           * reset(): Borra todos los campos del formulario
-           * y los devuelve a sus valores por defecto
-           */
           formulario.reset();
         } else {
-          // ❌ ERROR DEL SERVIDOR: Mostrar mensaje de error
-          alert('Error: ' + data.message);
+          // ❌ ERROR DEL SERVIDOR
+          alertContainer.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <i class="bi bi-exclamation-triangle-fill me-2"></i>
+              Error: ${data.message}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          `;
         }
         
       } catch (error) {
         // ============================================
         // MANEJAR ERRORES DE RED O SERVIDOR
         // ============================================
-        /**
-         * Este bloque se ejecuta si:
-         * - No hay conexión a internet
-         * - El servidor no está corriendo
-         * - Hay un error en la petición
-         * - El servidor no responde
-         */
         console.error('❌ Error al enviar formulario:', error);
-        alert('Hubo un error al enviar el formulario. Por favor, intenta nuevamente.');
+        alertContainer.innerHTML = `
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-wifi-off me-2"></i>
+            Hubo un error al enviar el formulario. Por favor, verifica tu conexión e intenta nuevamente.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+      } finally {
+        // RESTAURAR ESTADO DEL BOTÓN
+        submitBtn.disabled = false;
+        submitBtn.value = originalBtnText;
       }
     });
   }
